@@ -19,7 +19,7 @@ Mi Configuración de la terminal Kitty y zsh.
   ```
 - zsh
   ```bash
-  sudo apt install kitty
+  sudo apt install zsh
   ```
 - oh my zsh
   ```bash
@@ -33,3 +33,34 @@ Mi Configuración de la terminal Kitty y zsh.
   ```bash
   git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
   ```
+
+### Configure
+1. Clonar el repositorio y copiar los contenidos
+
+    Clonar el repositorio y entrar al directorio
+     ```bash
+     git clone https://github.com/StoneySpring688/KittyTerminalConfig.git
+     cd KittyTerminalConfig/
+     ```
+    Para copiar los contenidos del repositorio a su destino
+    ```bash
+    cp -r $(find . -mindepth 1 -not -path './.git*' -not -name 'README.md') ~/
+    cd
+    ```
+3. Establecer zsh como interprete de ordenes predeterminado
+    ```bash
+    chsh -s $(which zsh)
+    ```
+4. Instalar plugins de oh-my-zsh
+   ```bash
+   git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+   git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+   ```
+   El primer plugin muestra un "hint" que facilita completar el comando y el segundo plugin resalta la sintaxis del mismo.
+
+   Normalmente habría que incluir los plugins en ```zshrc``` pero en este caso ya está todo configurado
+5. Elegir entre p10k o starship
+
+   Si la eleccion es p10k bastará con comentar la última línea al fina de ```.zshrc``` la cual es ```eval "$(starship init zsh)"```.
+   
+   Si por el contrario se quiere usar starship, no será necesario realizar ninguna configuración adicional.
