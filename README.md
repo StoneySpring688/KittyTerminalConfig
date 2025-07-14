@@ -33,6 +33,12 @@ Mi Configuración de la terminal Kitty y zsh.
   ```bash
   git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
   ```
+-fastfetch
+  ```bash
+  sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
+  sudo apt update
+  sudo apt install fastfetch
+  ```
 
 ### Configure
 1. Clonar el repositorio y copiar los contenidos
