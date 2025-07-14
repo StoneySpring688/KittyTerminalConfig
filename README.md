@@ -33,11 +33,17 @@ Mi Configuración de la terminal Kitty y zsh.
   ```bash
   git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
   ```
--fastfetch
+- fastfetch
+  
+  En el caso de Ubuntu se pueden usar los siguientes comandos:
   ```bash
   sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
   sudo apt update
   sudo apt install fastfetch
+  ```
+  En el caso de Arch, se puede instalar con pacman:
+  ```bash
+  sudo pacman -S fastfetch
   ```
 
 ### Configure
@@ -50,7 +56,7 @@ Mi Configuración de la terminal Kitty y zsh.
      ```
     Para copiar los contenidos del repositorio a su destino
     ```bash
-    cp -r $(find . -mindepth 1 -not -path './.git*' -not -name 'README.md') ~/
+    rsync -av --exclude='.git' --exclude='README.md' --exclude='Hack/' ./ ~/
     cd
     ```
 3. Establecer zsh como interprete de ordenes predeterminado
