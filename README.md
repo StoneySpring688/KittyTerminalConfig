@@ -64,3 +64,25 @@ Mi Configuración de la terminal Kitty y zsh.
    Si la eleccion es p10k bastará con comentar la última línea al fina de ```.zshrc``` la cual es ```eval "$(starship init zsh)"```.
    
    Si por el contrario se quiere usar starship, no será necesario realizar ninguna configuración adicional.
+
+6. Shortcuts
+
+   Al introducir el comando
+   ```zsh
+   kittyhelp
+   ```
+   en la terminal de kitty, se mostrará una pequeña guía con los shortcuts.
+
+   Para los shortcuts de mover y redimensionar la ventana es necesario configurarlos en el entorno de GNOME, KDE, o el que se esté usando.
+
+   En el caso de GNOME solo hay que configurar el shortcut para redimensionar la ventana, con este comando:
+   ```bash
+   gsettings set org.gnome.desktop.wm.keybindings begin-resize "['<Super><Shift>r']"
+   ```
+   Con este otro comprueba que se haya configurado correctamente:
+   ```bash
+   gsettings get org.gnome.desktop.wm.keybindings begin-resize
+   ```
+   Debería devolver esto : ```['<Super><Shift>r']```
+  
+
