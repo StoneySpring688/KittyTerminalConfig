@@ -10,7 +10,7 @@ Mi Configuración de la terminal Kitty y zsh.
 > p10k y starship sirven para configurar el prompt de la terminal\
 > Se puede omitir de uno de los dos si se desea\
 > Si se prescinde de p10k es aconsejable cambiar ```ZSH_THEME="powerlevel10k/powerlevel10k"``` a esto ```ZSH_THEME="agnoster"``` en ```.zshrc```, así como eliminar el fichero ```.p10k.zsh```\
-> Si se prescinde de starship comentar ```eval "$(starship init zsh)"``` al final de ```.zshrc```
+> Si se prescinde de starship comentar ```eval "$(starship init zsh)"``` al final de ```.zshrc```, así como eliminar el fichero ```.config/starship.toml```
 
 ### 1. NerdFonts
 
