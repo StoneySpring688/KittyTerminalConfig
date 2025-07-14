@@ -12,11 +12,14 @@ banner=" ____  _   _  ___  ____ _____ ____ _   _ _____ ____
 echo "$banner"
 
 # Atajos básicos de kitty
-echo -e "\nNueva pestaña 		: Ctrl+Shift+T"
-echo "Cerrar pestaña		: Ctrl+Shift+Q"
-echo "Pestaña →     		: Ctrl+Shift+Right"
-echo "Pestaña ←     		: Ctrl+Shift+Left"
+echo -e "\nNueva pestaña 		: Ctrl + Shift + T"
+echo "Cerrar pestaña		: Ctrl + Shift + Q"
+echo "Pestaña →     		: Ctrl + Shift + Right"
+echo "Pestaña ←     		: Ctrl + Shift + Left"
 
-# Movilidad del fram
+# Movilidad del frame
 echo "Mover Ventana 		:  + 󰳽 "
 echo "Redimensionar Ventana	:  + shift+ R, 󰁁 resize direction, 󰌑 confirmar"
+
+# Lanzar apps
+echo "Tmux			: Ctrl + T"

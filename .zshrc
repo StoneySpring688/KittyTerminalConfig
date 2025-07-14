@@ -26,7 +26,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
-ZSH_THEME="powerlevel10k/powerlevel10k" #sobrescrito por starship
+ZSH_THEME="agnoster" #sobrescrito por starship
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -126,9 +126,13 @@ source $ZSH/oh-my-zsh.sh
 ##################
 
 # Alias para ver los atajos de Kitty
-if [[ "$TERM" == "xterm-kitty" ]]; then
-	alias kittyhelp='bash ~/.config/kitty/shortcutReminder.sh'
-	alias kittytheme='kitty +kitten themes'
+is_kitty_client() {
+    [[ -n $TMUX ]] && [[ $(tmux display-message -p '#{client_termname}' 2>/dev/null) == xterm-kitty ]]
+}
+
+if [[ $TERM == xterm-kitty ]] || is_kitty_client; then
+    alias kittyhelp='bash ~/.config/kitty/shortcutReminder.sh'
+    alias kittytheme='kitty +kitten themes'
 fi
 
 

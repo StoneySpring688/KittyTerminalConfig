@@ -64,6 +64,11 @@ En el caso de Arch, se puede instalar con pacman:
 sudo pacman -S fastfetch
 ```
 
+### 8. tmux
+
+```bash
+sudo apt install tmux
+```
 
 
 ## Configuración
@@ -133,4 +138,11 @@ gsettings get org.gnome.desktop.wm.keybindings begin-resize
 ```
 Debería devolver esto : ```['<Super><Shift>r']```
   
+### 6. instalar plugins de tmux
 
+Para instalar los plugins definidos en ```.tmux.conf``` hay que instalar el *tpm*
+```bash
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+```
+Tras eso, inicia tmux usando el shortcut```ctrl + t``` y haz ```ctrl + a , shift + i``` para instalar los plugins.\
+Después haz ```ctrl + a , r``` para recargar la configuración de tmux.
