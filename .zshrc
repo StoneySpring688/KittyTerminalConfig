@@ -8,6 +8,16 @@ fi
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
+############################
+## FastFetch At The Start ##
+############################
+
+fastfetch
+
+############################
+## FastFetch At The Start ##
+############################
+
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
@@ -16,7 +26,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
-ZSH_THEME="powerlevel10k/powerlevel10k" #sobrescrito por starship
+ZSH_THEME="agnoster" #sobrescrito por starship
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -116,7 +126,11 @@ source $ZSH/oh-my-zsh.sh
 ##################
 
 # Alias para ver los atajos de Kitty
-alias kittyhelp='bash ~/.config/kitty/shortcutReminder.sh'
+if [[ "$TERM" == "xterm-kitty" ]]; then
+	alias kittyhelp='bash ~/.config/kitty/shortcutReminder.sh'
+	alias kittytheme='kitty +kitten themes'
+fi
+
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
