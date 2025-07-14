@@ -4,7 +4,7 @@ Mi Configuración de la terminal Kitty y zsh.
 >[!IMPORTANT]
 >Es necesario instalar las dependencias
 
-### Dependencias
+## Dependencias
 - NerdFonts
 
   Pueden instalarse las que se quiera desde [aquí](https://www.nerdfonts.com/font-downloads), siempre que se configuren correctamente en ```.zshrc```.
@@ -46,7 +46,7 @@ Mi Configuración de la terminal Kitty y zsh.
   sudo pacman -S fastfetch
   ```
 
-### Configure
+## Configuración
 1. Clonar el repositorio y copiar los contenidos
 
     Clonar el repositorio y entrar al directorio
