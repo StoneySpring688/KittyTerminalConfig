@@ -115,7 +115,7 @@ Normalmente habría que incluir los plugins en ```zshrc``` pero en este caso ya 
 
 Si la eleccion es p10k bastará con comentar la última línea al fina de ```.zshrc``` la cual es ```eval "$(starship init zsh)"```.
    
-Si por el contrario se quiere usar starship, no será necesario realizar ninguna configuración adicional.
+Si por el contrario se quiere usar starship, bastará con cambiar ```ZSH_THEME="powerlevel10k/powerlevel10k"``` a esto ```ZSH_THEME="agnoster"``` en ```.zshrc```.
 
 
 ### 5. Shortcuts
